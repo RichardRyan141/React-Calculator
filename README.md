@@ -20,8 +20,8 @@ To install all the dependences of the project, run the following command:
  - Link : https://github.com/RichardRyan141/React-Calculator
 
 
-#### Deployment Link:
- - Link : https://react-calculator-omega-navy.vercel.app/
+#### Deployment Link (Old):
+ - Link (Old) : https://react-calculator-omega-navy.vercel.app/
 
 ### Fixes
 1) Fixed the positive/negative button click
