@@ -11,24 +11,22 @@
 
 To install all the dependences of the project, run the following command:
 
-    git clone https://github.com/shakti1590/React-Calculator.git
+    git clone https://github.com/RichardRyan141/React-Calculator
     yarn install
     yarn start
 
 
 #### Source Code:
- - Link : https://github.com/shakti1590/React-Calculator
+ - Link : https://github.com/RichardRyan141/React-Calculator
 
 
 #### Deployment Link:
  - Link : https://react-calculator-omega-navy.vercel.app/
 
+### Fixes
+1) Fixed the positive/negative button click
+2) Added an equation visualizer above the main number screen
+3) Added history of operations
 
-
-![Project Preview](./src/calc-app.png)
-
-
-
-<p align="center">
-  Show some :heart: by starring the repository.
-</p>
+## Preview
+![Preview](public/Screenshot.png)

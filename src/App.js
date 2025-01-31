@@ -1,33 +1,30 @@
-import Wrapper from "./components/Wrapper";
-import Screen from "./components/Screen";
-import ButtonBox from './components/ButtonBox'
-import Button from './components/Button'
-import CalcProvider from "./context/CalcContext";
+import { createContext, useState } from "react"
 
-const btnValues = [
-  ["C", "+/-", "%", "/"],
-  [7, 8, 9, "x"],
-  [4, 5, 6, "-"],
-  [1, 2, 3, "+"],
-  [0, ".", "="],
-];
+export const CalcContext = createContext()
 
-function App() {
-  return (
-    <CalcProvider>
-      <Wrapper>
-        <Screen />
-        <ButtonBox>
-          {btnValues.flat().map((btn, i) => (
-            <Button
-              value={btn}
-              key={i}
-            />
-          ))}
-        </ButtonBox>
-      </Wrapper>
-    </CalcProvider>
-  );
+const CalcProvider = ({ children }) => {
+    const [calc, setCalc] = useState({
+        sign: "",
+        num: 0,
+        res: 0
+    });
+    
+    const [history, setHistory] = useState([]);
+
+    const clearHistory = () => {
+        setHistory([]);
+    };
+
+
+    const providerValue = {
+        calc, setCalc, history, setHistory, clearHistory
+    }
+
+    return (
+        <CalcContext.Provider value={providerValue}>
+            {children}
+        </CalcContext.Provider>
+    )
 }
 
-export default App;
+export default CalcProvider

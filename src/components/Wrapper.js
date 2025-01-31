@@ -1,7 +1,6 @@
-
 const Wrapper = ({ children }) => {
   return (
-    <div className="wrapper">{children}</div>
+      <div className="wrapper">{children}</div>
   )
 }
 
